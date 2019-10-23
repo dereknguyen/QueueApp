@@ -1,25 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rTN-xS-8hP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <!--Launch Screen-->
+        <scene sceneID="Hc2-Rg-c3z">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="Launch Screen" title="Launch Screen" id="rTN-xS-8hP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cg-nb-Ldq" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Badminton Background" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-Dn-OK3" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="j2H-xC-VuU" userLabel="Logo Stack">
+                                <rect key="frame" x="172" y="313" width="70" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Q" translatesAutoresizingMaskIntoConstraints="NO" id="Crz-VG-vA4">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Crz-VG-vA4" secondAttribute="height" multiplier="1:1" id="YW2-lT-bsd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Mdo-jG-Uk8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96999999999999997" green="0.96999999999999997" blue="0.96999999999999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nEI-Dn-OK3" firstAttribute="leading" secondItem="2cg-nb-Ldq" secondAttribute="leading" id="78B-1n-4dL"/>
+                            <constraint firstItem="nEI-Dn-OK3" firstAttribute="top" secondItem="2cg-nb-Ldq" secondAttribute="top" id="Iec-qF-XWP"/>
+                            <constraint firstItem="j2H-xC-VuU" firstAttribute="centerX" secondItem="2cg-nb-Ldq" secondAttribute="centerX" id="bjE-Py-T9D"/>
+                            <constraint firstItem="nEI-Dn-OK3" firstAttribute="trailing" secondItem="2cg-nb-Ldq" secondAttribute="trailing" id="gNx-mf-KfK"/>
+                            <constraint firstItem="nEI-Dn-OK3" firstAttribute="bottom" secondItem="2cg-nb-Ldq" secondAttribute="bottom" id="hth-sV-3YG"/>
+                            <constraint firstItem="j2H-xC-VuU" firstAttribute="centerY" secondItem="2cg-nb-Ldq" secondAttribute="centerY" constant="-100" id="p53-NJ-oPh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oun-Lv-mzr"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5Vr-7H-ll8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRA-bT-pay" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-651" y="27"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Badminton Background" width="1125" height="2436"/>
+        <image name="Logo Q" width="204" height="210"/>
+    </resources>
 </document>
