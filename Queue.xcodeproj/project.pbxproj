@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		328F78AF0A663D7D3BDF5E49 /* Pods_Queue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD21EBF52ED16236AA5D426 /* Pods_Queue.framework */; };
+		F20E3D3623612DB800C32893 /* NoAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D3523612DB800C32893 /* NoAccountViewController.swift */; };
+		F20E3D3A236142F600C32893 /* NewNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D39236142F600C32893 /* NewNameViewController.swift */; };
+		F20E3D3E2362D6D800C32893 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D3D2362D6D800C32893 /* NewPasswordViewController.swift */; };
+		F20E3D412362D71000C32893 /* NewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D402362D70F00C32893 /* NewImageViewController.swift */; };
+		F2170D26236AC377005448BD /* ClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170D25236AC377005448BD /* ClubTableViewController.swift */; };
 		F259748F235F7A4D00A3DE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259748E235F7A4D00A3DE51 /* AppDelegate.swift */; };
 		F2597491235F7A4D00A3DE51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */; };
 		F2597493235F7A4D00A3DE51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2597492235F7A4D00A3DE51 /* ViewController.swift */; };
@@ -28,10 +33,21 @@
 		F25974CA2360140000A3DE51 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25974C92360140000A3DE51 /* AlertService.swift */; };
 		F25974D12360289D00A3DE51 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25974CE23601A7B00A3DE51 /* LoadingViewController.swift */; };
 		F25974D2236028DB00A3DE51 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25974CD23601A7900A3DE51 /* Loading.storyboard */; };
+		F26712A52363E71F00084354 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26712A42363E71F00084354 /* Home.storyboard */; };
+		F26EC87A236D34FF004CB6AB /* ClubSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26EC879236D34FF004CB6AB /* ClubSelectionTableViewController.swift */; };
+		F26EC87C236D3D25004CB6AB /* NavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26EC87B236D3D25004CB6AB /* NavigationControllerExtensions.swift */; };
+		F27E0F48236AF794008DFCE8 /* CourtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27E0F47236AF794008DFCE8 /* CourtCell.swift */; };
+		F2860D8B236D683300BEFB34 /* ClubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2860D8A236D683300BEFB34 /* ClubCell.swift */; };
+		F2860D8D236D776C00BEFB34 /* AddNewClubStaticCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2860D8C236D776C00BEFB34 /* AddNewClubStaticCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A11EE57723FBA6E3F280A5CD /* Pods-Queue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Queue.release.xcconfig"; path = "Target Support Files/Pods-Queue/Pods-Queue.release.xcconfig"; sourceTree = "<group>"; };
+		F20E3D3523612DB800C32893 /* NoAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoAccountViewController.swift; sourceTree = "<group>"; };
+		F20E3D39236142F600C32893 /* NewNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewNameViewController.swift; sourceTree = "<group>"; };
+		F20E3D3D2362D6D800C32893 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		F20E3D402362D70F00C32893 /* NewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageViewController.swift; sourceTree = "<group>"; };
+		F2170D25236AC377005448BD /* ClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewController.swift; sourceTree = "<group>"; };
 		F259748B235F7A4D00A3DE51 /* Queue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Queue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F259748E235F7A4D00A3DE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +70,12 @@
 		F25974C92360140000A3DE51 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		F25974CD23601A7900A3DE51 /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		F25974CE23601A7B00A3DE51 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F26712A42363E71F00084354 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F26EC879236D34FF004CB6AB /* ClubSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubSelectionTableViewController.swift; sourceTree = "<group>"; };
+		F26EC87B236D3D25004CB6AB /* NavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtensions.swift; sourceTree = "<group>"; };
+		F27E0F47236AF794008DFCE8 /* CourtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtCell.swift; sourceTree = "<group>"; };
+		F2860D8A236D683300BEFB34 /* ClubCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCell.swift; sourceTree = "<group>"; };
+		F2860D8C236D776C00BEFB34 /* AddNewClubStaticCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewClubStaticCell.swift; sourceTree = "<group>"; };
 		F9D6CD04378241B72C058134 /* Pods-Queue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Queue.debug.xcconfig"; path = "Target Support Files/Pods-Queue/Pods-Queue.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD21EBF52ED16236AA5D426 /* Pods_Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,9 +125,8 @@
 				F259748E235F7A4D00A3DE51 /* AppDelegate.swift */,
 				F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */,
 				F2597492235F7A4D00A3DE51 /* ViewController.swift */,
-				F25974C92360140000A3DE51 /* AlertService.swift */,
-				F25974D023601CF500A3DE51 /* Loading Screen */,
 				F25974B3235F8AA700A3DE51 /* Authentication Screens */,
+				F26712A32363E6FE00084354 /* Home Screens */,
 				F25974A4235F847500A3DE51 /* Utils */,
 				F2597499235F7A4E00A3DE51 /* LaunchScreen.storyboard */,
 				F25974C72360101300A3DE51 /* loadingBar.json */,
@@ -121,6 +142,8 @@
 				F25974A5235F84AC00A3DE51 /* Assets.swift */,
 				F25974BC235F8D8200A3DE51 /* TypeAlias.swift */,
 				F25974AF235F864D00A3DE51 /* EmailDomains.swift */,
+				F25974C92360140000A3DE51 /* AlertService.swift */,
+				F25974D023601CF500A3DE51 /* Loading Screen */,
 				F25974BB235F8D4400A3DE51 /* Queue App UI Classes */,
 				F25974BA235F8D2000A3DE51 /* Extensions */,
 			);
@@ -134,6 +157,10 @@
 				F25974B4235F8BC700A3DE51 /* GreetingViewController.swift */,
 				F25974BE235FA4D900A3DE51 /* EmailCheckViewController.swift */,
 				F25974C0235FC38900A3DE51 /* LoginViewController.swift */,
+				F20E3D3523612DB800C32893 /* NoAccountViewController.swift */,
+				F20E3D39236142F600C32893 /* NewNameViewController.swift */,
+				F20E3D402362D70F00C32893 /* NewImageViewController.swift */,
+				F20E3D3D2362D6D800C32893 /* NewPasswordViewController.swift */,
 			);
 			path = "Authentication Screens";
 			sourceTree = "<group>";
@@ -142,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F25974B8235F8D1300A3DE51 /* StringExtensions.swift */,
+				F26EC87B236D3D25004CB6AB /* NavigationControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +191,19 @@
 				F25974CE23601A7B00A3DE51 /* LoadingViewController.swift */,
 			);
 			path = "Loading Screen";
+			sourceTree = "<group>";
+		};
+		F26712A32363E6FE00084354 /* Home Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F26712A42363E71F00084354 /* Home.storyboard */,
+				F2170D25236AC377005448BD /* ClubTableViewController.swift */,
+				F27E0F47236AF794008DFCE8 /* CourtCell.swift */,
+				F26EC879236D34FF004CB6AB /* ClubSelectionTableViewController.swift */,
+				F2860D8A236D683300BEFB34 /* ClubCell.swift */,
+				F2860D8C236D776C00BEFB34 /* AddNewClubStaticCell.swift */,
+			);
+			path = "Home Screens";
 			sourceTree = "<group>";
 		};
 		F2DC9640B38059A3571D3028 /* Frameworks */ = {
@@ -236,6 +277,7 @@
 				F25974B2235F874F00A3DE51 /* Authentication.storyboard in Resources */,
 				F259749B235F7A4E00A3DE51 /* LaunchScreen.storyboard in Resources */,
 				F25974C82360101300A3DE51 /* loadingBar.json in Resources */,
+				F26712A52363E71F00084354 /* Home.storyboard in Resources */,
 				F25974D2236028DB00A3DE51 /* Loading.storyboard in Resources */,
 				F25974A3235F843900A3DE51 /* Assets.xcassets in Resources */,
 			);
@@ -291,9 +333,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25974B7235F8BE400A3DE51 /* CustomViewController.swift in Sources */,
+				F20E3D3623612DB800C32893 /* NoAccountViewController.swift in Sources */,
 				F2597493235F7A4D00A3DE51 /* ViewController.swift in Sources */,
+				F20E3D3A236142F600C32893 /* NewNameViewController.swift in Sources */,
 				F25974D12360289D00A3DE51 /* LoadingViewController.swift in Sources */,
+				F26EC87C236D3D25004CB6AB /* NavigationControllerExtensions.swift in Sources */,
 				F25974BF235FA4D900A3DE51 /* EmailCheckViewController.swift in Sources */,
+				F2860D8B236D683300BEFB34 /* ClubCell.swift in Sources */,
+				F2860D8D236D776C00BEFB34 /* AddNewClubStaticCell.swift in Sources */,
+				F26EC87A236D34FF004CB6AB /* ClubSelectionTableViewController.swift in Sources */,
 				F25974B9235F8D1300A3DE51 /* StringExtensions.swift in Sources */,
 				F25974CA2360140000A3DE51 /* AlertService.swift in Sources */,
 				F259748F235F7A4D00A3DE51 /* AppDelegate.swift in Sources */,
@@ -303,6 +351,10 @@
 				F25974A6235F84AC00A3DE51 /* Assets.swift in Sources */,
 				F2597491235F7A4D00A3DE51 /* SceneDelegate.swift in Sources */,
 				F25974BD235F8D8200A3DE51 /* TypeAlias.swift in Sources */,
+				F2170D26236AC377005448BD /* ClubTableViewController.swift in Sources */,
+				F27E0F48236AF794008DFCE8 /* CourtCell.swift in Sources */,
+				F20E3D3E2362D6D800C32893 /* NewPasswordViewController.swift in Sources */,
+				F20E3D412362D71000C32893 /* NewImageViewController.swift in Sources */,
 				F25974C1235FC38900A3DE51 /* LoginViewController.swift in Sources */,
 				F25974AD235F850B00A3DE51 /* CustomTextField.swift in Sources */,
 			);

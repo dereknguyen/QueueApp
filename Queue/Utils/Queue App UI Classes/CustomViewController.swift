@@ -13,17 +13,26 @@ class CustomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        removeBackButtonLabel()
+        setBackButton(action: #selector(backAction))
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
     
     func setupNavigationBar() {
-        let backImage = Icons.leftArrow?.withAlignmentRectInsets(UIEdgeInsets(top: 20, left: -4, bottom: 10, right: 0))
         navigationController?.navigationBar.barTintColor = Colors.background
         navigationController?.navigationBar.backgroundColor = Colors.background
         navigationController?.navigationBar.tintColor = Colors.tintColor
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.backIndicatorImage = backImage
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = backImage
+    }
+    
+    func setBackButton(action: Selector? = nil) {
+        let backImage = Icons.leftArrow?.withAlignmentRectInsets(UIEdgeInsets(top: 5, left: -4, bottom: 5, right: 0))
+        let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: action)
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backAction() {
+        navigationController?.popViewController(animated: true)
     }
     
     func removeBackButtonLabel() {
@@ -38,3 +47,11 @@ class CustomViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 }
+
+extension CustomViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
+
+

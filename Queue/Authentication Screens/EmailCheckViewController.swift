@@ -14,10 +14,11 @@ class EmailCheckViewController: QueueUI.ViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var emailAddressTextField: QueueUI.TextField!
-    @IBOutlet var domainSuggestionBtns: [UIButton]!
-    @IBOutlet weak var contBtnBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var contBtn: QueueUI.Button!
+    @IBOutlet weak var continueButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var continueButton: QueueUI.Button!
     @IBOutlet weak var domainSuggestionStk: UIStackView!
+    
+    @IBOutlet var domainSuggestionBtns: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,39 +28,33 @@ class EmailCheckViewController: QueueUI.ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showNavigationBar(animated: animated)
-        addObserverAndTarget()
+        addObservers()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        if let text = emailAddressTextField.text, text.isEmpty {
-            emailAddressTextField.becomeFirstResponder()
-        }
-    }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.resignFirstResponder()
+        emailAddressTextField.endEditing(true)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
+        removeObserver()
     }
     
     private func setupUI() {
-        titleLabel.text = Copy.EmailCheckView.title.rawValue
-        messageLabel.text = Copy.EmailCheckView.message.rawValue
         domainSuggestionStk.isHidden = true
-        contBtn.setDisabled()
+        continueButton.setDisabled()
     }
     
-    private func addObserverAndTarget() {
-        emailAddressTextField.addTarget(self, action: #selector(handleEmailInput), for: .editingChanged)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)),
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard),
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)),
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeObserver() {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func handleKeyboard(notification: Notification) {
@@ -70,7 +65,7 @@ class EmailCheckViewController: QueueUI.ViewController {
             let isKeyboardShowing = notification.name == UIResponder.keyboardWillShowNotification
             let adjustedHeight = keyboardFrame.height - view.safeAreaInsets.bottom
 
-            contBtnBottomConstraint.constant = isKeyboardShowing ? adjustedHeight : 0
+            continueButtonBottomConstraint.constant = isKeyboardShowing ? adjustedHeight : 0
             
             UIView.animate(withDuration: 0, delay: 0, options: UIView.AnimationOptions.init(rawValue: curve), animations: {
                 [weak self] in
@@ -78,13 +73,12 @@ class EmailCheckViewController: QueueUI.ViewController {
             }, completion: nil)
         }
     }
-        
-    // Handling user editing email textfield
-    @objc private func handleEmailInput() {
+    
+    @IBAction func emailTextFieldDidChanged(_ sender: UITextField) {
         guard let email = emailAddressTextField.text else { return }
         
         // Check if email is valid, activate continue button.
-        email.isValidEmail() ? contBtn.setActive() : contBtn.setDisabled()
+        email.isValidEmail() ? continueButton.setActive() : continueButton.setDisabled()
     
         // Start string range of interest after first occurance of "@" symbol
         if let range = email.range(of: "@") {
@@ -126,26 +120,44 @@ class EmailCheckViewController: QueueUI.ViewController {
             emailAddressTextField.text = username + "@" + domain
             
             if let email = emailAddressTextField.text, email.isValidEmail() {
-                contBtn.setActive()
+                continueButton.setActive()
             }
         }
     }
     
     @IBAction func continueTouched(_ sender: UIButton) {
-        emailAddressTextField.resignFirstResponder()
+        // Loading Screen View Controller
+        let loading = AlertService.loadingController(title: LoadingMessage.email.title,
+                                                     message: LoadingMessage.email.msg)
         
-        let loadingVC = AlertService.loadingController(title: Copy.EmailLoadingView.title.rawValue,
-                                                       message: Copy.EmailLoadingView.message.rawValue)
-        present(loadingVC, animated: true, completion: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-                loadingVC.dismiss(animated: true) {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "emailCheckToLogin", sender: nil)
+        if let email = emailAddressTextField.text {
+            present(loading, animated: true) {
+                [weak self] in
+                guard let this = self else { fatalError() }
+                
+                // Check if account exist
+                if this.userAccountExist(email: email) {
+                    loading.dismiss(animated: true) {
+                        DispatchQueue.main.async {
+                            this.performSegue(withIdentifier: "emailCheckToLogin", sender: nil)
+                        }
                     }
                 }
-            })
-        })
+                else {
+                    loading.dismiss(animated: true) {
+                        DispatchQueue.main.async {
+                            // Direct user to new account flow
+                            this.performSegue(withIdentifier: "emailCheckToNoAccount", sender: nil)
+                        }
+                    }
+                }
+            }
+        }
     }
     
+    private func userAccountExist(email: String) -> Bool {
+        // TODO: Handle checking account exist or not
+        return false
+    }
 }
 

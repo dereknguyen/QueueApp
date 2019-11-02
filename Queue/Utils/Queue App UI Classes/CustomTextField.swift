@@ -61,14 +61,19 @@ class CustomTextField: UITextField {
         
         placeholderLabel.textColor = placeholderColor
         
+        guard let text = text else {
+            print("Text is empty")
+            return
+        }
+        
         if isActive {
-            placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 13.0, weight: .heavy)
+            placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 9.0, weight: .heavy)
             placeholderLabel.transform = CGAffineTransform(scaleX: 0.60, y: 0.60)
                 .translatedBy(x: 0.0, y: -placeholderLabel.font.lineHeight)
             placeholderLabel.alpha = 0.7
         }
-        else {
-            placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 13.0, weight: .heavy)
+        else if text.isEmpty {
+            placeholderLabel.font = UIFont.systemFont(ofSize: self.font?.pointSize ?? 9.0, weight: .heavy)
             placeholderLabel.transform = .identity
             placeholderLabel.frame = placeholderRect(forBounds: bounds)
             placeholderLabel.alpha = 0.3
@@ -88,23 +93,31 @@ class CustomTextField: UITextField {
         // TODO: To be implemented
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    override func draw(_ rect: CGRect) {
         guard isFirstResponder == false else { return }
         
         updatePlaceholder()
         addSubview(placeholderLabel)
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        guard isFirstResponder == false else { return }
-        
-        updatePlaceholder()
-        addSubview(placeholderLabel)
-    }
+    
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//
+//        guard isFirstResponder == false else { return }
+//
+//        updatePlaceholder()
+//        addSubview(placeholderLabel)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//
+//        guard isFirstResponder == false else { return }
+//
+//        updatePlaceholder()
+//        addSubview(placeholderLabel)
+//    }
 }
 
 

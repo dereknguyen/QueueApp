@@ -54,12 +54,17 @@ class GreetingViewController: QueueUI.ViewController {
         }, completion: nil)
 
         // "GET STARTED" animation
-        UIView.animate(withDuration: 0.8, delay: 1.6, usingSpringWithDamping: 0.6,
+        UIView.animate(withDuration: 0.8, delay: 1.0, usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
+            [weak self] in
+            self?.btnUnderbarView.alpha = 1
+            self?.btnUnderbarView.transform = .identity
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.5, delay: 1.0, usingSpringWithDamping: 0.6,
                        initialSpringVelocity: 0.0, options: .curveEaseInOut, animations: {
             [weak self] in
             self?.getStartedBtn.alpha = 1
-            self?.btnUnderbarView.alpha = 1
-            self?.btnUnderbarView.transform = .identity
         }, completion: nil)
     }
 }

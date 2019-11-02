@@ -23,7 +23,7 @@ class LoginViewController: QueueUI.ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        loginBtn.setDisabled()
         addObserverAndTarget()
     }
     
@@ -31,40 +31,37 @@ class LoginViewController: QueueUI.ViewController {
         super.viewWillAppear(animated)
         showNavigationBar(animated: animated)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        passwordTextField.becomeFirstResponder()
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        passwordTextField.endEditing(true)
     }
-
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-    
-    private func setupUI() {
-        titleLabel.text = Copy.LoginView.title.rawValue
-        messageLabel.text = Copy.LoginView.message.rawValue
-        loginBtn.setDisabled()
-    }
-    
+        
     private func addObserverAndTarget() {
-        contentScrollView.addGestureRecognizer(UITapGestureRecognizer(target: self.contentScrollView,
-                                                                      action: #selector(UIView.endEditing(_:))))
+        let endEditGesture = UITapGestureRecognizer(target: self.contentScrollView,
+                                                    action: #selector(UIView.endEditing))
+        
+        contentScrollView.addGestureRecognizer(endEditGesture)
         passwordTextField.addTarget(self, action: #selector(isValidPassword), for: .editingChanged)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard),
                                                name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard),
                                                name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // Current solution to verifying a valid password.
+    // Password Req: 6 Characters minimum
     @objc func isValidPassword() {
         guard let count = passwordTextField.text?.count else { return }
         count > 5 ? loginBtn.setActive() : loginBtn.setDisabled()
     }
     
+    // Handle UI contents to avoid keyboard when keyboard show or hide.
     @objc func handleKeyboard(notification: Notification) {
-        
         if let userInfo = notification.userInfo,
             let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? UInt,
             let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -80,19 +77,25 @@ class LoginViewController: QueueUI.ViewController {
             }, completion: nil)
         }
         
+        // Get the password frame in its superview context
         let passwordFrame = passwordStk.superview!.convert(passwordStk.frame, to: nil)
-        let heightConflict = viewConflictOffset(topFrame: passwordFrame, bottomFrame: loginBtnContentView.frame)
         
-        contentScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: heightConflict, right: 0)
-        contentScrollView.setContentOffset(CGPoint(x: 0, y: heightConflict), animated: true)
-
+        // Calculate offset needed to make sure non-overlapping UI element.
+        // In this case: login button represent the top of keyboard and can overlap with textfield.
+        let offset = offsetForConflictFrames(topFrame: passwordFrame, bottomFrame: loginBtnContentView.frame)
+        
+        // Scroll scrollview up to the offset value so that UI element does not overlap with keyboard.
+        contentScrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: offset, right: 0)
+        contentScrollView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
     }
     
-    private func viewConflictOffset(topFrame: CGRect, bottomFrame: CGRect) -> CGFloat {
+    // Calculate offset needed to clear view overlapping conflict.
+    private func offsetForConflictFrames(topFrame: CGRect, bottomFrame: CGRect) -> CGFloat {
         let conflict = (topFrame.origin.y + topFrame.height) - bottomFrame.origin.y
         return conflict > 0 ? conflict + 20 : 0
     }
     
+    // Handling hiding or showing password using "Secure Text Entry"
     @IBAction func hidePasswordBtnTouched(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
         
