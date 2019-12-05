@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f0j-JG-edd">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="xCS-bm-6TJ">
+            <objects>
+                <viewController storyboardIdentifier="Loading" modalPresentationStyle="overFullScreen" id="f0j-JG-edd" customClass="LoadingViewController" customModule="Queue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4MT-WM-B46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-Fr-bio" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="627" width="375" height="185"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qaz-pM-JRX" userLabel="Content Stack">
+                                        <rect key="frame" x="20" y="30" width="280" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8T5-u7-qay" userLabel="Title Stack">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="42"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECKING EMAIL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-Wp-bR4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-4m-w0X" customClass="AnimationView" customModule="Lottie">
+                                                        <rect key="frame" x="0.0" y="37" width="75" height="5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="5" id="Hng-4N-c3m"/>
+                                                            <constraint firstAttribute="width" constant="75" id="k2n-Kd-S9P"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hang tight for a moment." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-Ut-Cht">
+                                                <rect key="frame" x="0.0" y="72" width="171.66666666666666" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8T5-u7-qay" firstAttribute="width" secondItem="Qaz-pM-JRX" secondAttribute="width" id="ok1-Za-YCo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="4Ac-Jk-uLK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qaz-pM-JRX" secondAttribute="trailing" constant="75" id="LHj-jB-kzo"/>
+                                    <constraint firstItem="Qaz-pM-JRX" firstAttribute="top" secondItem="KP3-Fr-bio" secondAttribute="top" constant="30" id="UCg-Wk-iz6"/>
+                                    <constraint firstItem="Qaz-pM-JRX" firstAttribute="leading" secondItem="KP3-Fr-bio" secondAttribute="leading" constant="20" id="h7n-hw-S7K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KP3-Fr-bio" secondAttribute="bottom" id="NZl-NX-9q5"/>
+                            <constraint firstItem="KP3-Fr-bio" firstAttribute="trailing" secondItem="4xP-IW-IHo" secondAttribute="trailing" id="RTP-C9-yCX"/>
+                            <constraint firstItem="KP3-Fr-bio" firstAttribute="leading" secondItem="4xP-IW-IHo" secondAttribute="leading" id="w2i-sE-b7n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4xP-IW-IHo"/>
+                    </view>
+                    <connections>
+                        <outlet property="animationView" destination="Gk8-4m-w0X" id="0AD-KT-JkF"/>
+                        <outlet property="contentView" destination="KP3-Fr-bio" id="Txa-Kd-na1"/>
+                        <outlet property="messageLabel" destination="3hM-Ut-Cht" id="5Ef-qo-kdA"/>
+                        <outlet property="titleLabel" destination="JEv-Wp-bR4" id="uYd-Rn-l2M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mwn-iC-mrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
