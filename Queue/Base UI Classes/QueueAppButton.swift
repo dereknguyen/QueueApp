@@ -16,22 +16,27 @@ class QueueAppButton: UIButton {
     }
     
     func setButton(title: String? = nil, state: QueueAppButton.ActionState) {
-    
-        setTitle(
-            (title ?? self.title(for: .normal))?.uppercased(),
-            for: .normal
-        )
         
-        layer.borderWidth = 0.0
-        layer.borderColor = UIColor.clear.cgColor
-        gradientLayer.removeFromSuperlayer()
-        
-        switch state {
-        case .active:       setActive()
-        case .destructive:  setDestructive()
-        case .disabled:     setDisabled()
-        case .normal:       setNormal()
+        DispatchQueue.main.async {
+            [weak self] in
+            guard let this = self else { return }
+            this.setTitle(
+                (title ?? this.title(for: .normal))?.uppercased(),
+                for: .normal
+            )
+            
+            this.layer.borderWidth = 0.0
+            this.layer.borderColor = UIColor.clear.cgColor
+            this.gradientLayer.removeFromSuperlayer()
+            
+            switch state {
+            case .active:       this.setActive()
+            case .destructive:  this.setDestructive()
+            case .disabled:     this.setDisabled()
+            case .normal:       this.setNormal()
+            }
         }
+
     }
     
     private func setDisabled() {

@@ -6,6 +6,11 @@ class LoadingViewController: UIViewController {
     private let loadingAnimation = "loadingBar"
     private var loadingTitle: String?
     private var loadingMessage: String?
+    private var completionTitle: String!
+    private var completionMessage: String!
+    private var completionButtonTitle: String!
+    private var completionHandler: (() -> Void)!
+    
     
     // The overlay view to be added to superview.
     private lazy var overlayView: UIView = {
@@ -13,7 +18,7 @@ class LoadingViewController: UIViewController {
         let frame = CGRect(x: bounds.origin.x, y: bounds.origin.y - 100,
                            width: bounds.width, height: bounds.height + 100)
         let view = UIView(frame: frame)
-        view.backgroundColor = UIColor(white: 0, alpha: 0.3)
+        view.backgroundColor = UIColor.alertBackgroundOverlay
         view.alpha = 0.0
         return view
     }()
@@ -22,6 +27,18 @@ class LoadingViewController: UIViewController {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var animationView: AnimationView!
     @IBOutlet private weak var contentView: UIView!
+    @IBOutlet weak var continueBtn: QueueUI.Button!
+    @IBOutlet weak var continueBtnHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var distanceToBottomConstraint: NSLayoutConstraint!
+    
+    @IBAction func continueBtnTouched(_ sender: QueueUI.Button) {
+        if let handler = completionHandler {
+            handler()
+        }
+        else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     // MARK: - View Lifecyle
     
@@ -67,6 +84,10 @@ class LoadingViewController: UIViewController {
         animationView.contentMode = .scaleToFill
         titleLabel.text = loadingTitle
         messageLabel.text = loadingMessage
+        
+        continueBtn.isHidden = true
+        continueBtn.alpha = 0.0
+        distanceToBottomConstraint.constant = 16.0
     }
     
     private func registerAppActivityObserver() {
@@ -100,6 +121,47 @@ class LoadingViewController: UIViewController {
         }
         
         parentController.present(self, animated: true, completion: nil)
+    }
+    
+    public func setCompletionAlert(
+        title: String?,
+        message: String?,
+        buttonTitle: String?,
+        handler: (() -> Void)? = nil
+    ) {
+        completionTitle = title?.uppercased()
+        completionMessage = message
+        completionButtonTitle = buttonTitle
+        completionHandler = handler
+    }
+    
+    public func presentCompletion() {
+        
+        animationView.pause()
+        titleLabel.text = completionTitle
+        messageLabel.text = completionMessage
+        animationView.isHidden = true
+        view.layoutIfNeeded()
+
+        continueBtn.isHidden = false
+        continueBtn.setButton(title: completionButtonTitle, state: .active)
+        distanceToBottomConstraint.constant = 84.0
+        
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0.0,
+            options: .curveLinear,
+            animations: {
+                [weak self] in
+                self?.view.layoutIfNeeded()
+            },
+            completion: nil
+        )
+        
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveLinear, animations: {
+            [weak self] in
+            self?.continueBtn.alpha = 1.0
+        }, completion: nil)
     }
 }
 

@@ -33,14 +33,21 @@ class JoinClubViewController: QueueUI.SingleTextFieldViewController {
             title: "Finding Club",
             message: "Hang tight for a moment while we find the club with that ID."
         )
+        loadingVC.setCompletionAlert(
+            title: "Could Not Find Club With That ID",
+            message: "Make sure the Club ID is correct by double checking with club's admin or the club's members.",
+            buttonTitle: "Okay"
+        )
         
         loadingVC.present(in: self)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             DispatchQueue.main.async {
-                loadingVC.dismiss(animated: true) {
-                    self.performSegue(withIdentifier: "toConfirmFoundClub", sender: nil)
-                }
+//                loadingVC.dismiss(animated: true) {
+//                    self.performSegue(withIdentifier: "toConfirmFoundClub", sender: nil)
+//
+//                }
+                loadingVC.presentCompletion()
             }
         }
         

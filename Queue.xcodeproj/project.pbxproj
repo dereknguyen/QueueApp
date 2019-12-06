@@ -46,6 +46,8 @@
 		F28DAFC7237CFA9900846C9D /* ChooseClubs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */; };
 		F28DAFC9237D037100846C9D /* JoinClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28DAFC8237D037100846C9D /* JoinClubViewController.swift */; };
 		F28F74E82397DD2500730309 /* ConfirmFoundClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F74E72397DD2500730309 /* ConfirmFoundClubViewController.swift */; };
+		F28F74EB2398DB0700730309 /* LoadingAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F74EA2398DB0700730309 /* LoadingAccessory.swift */; };
+		F28F74ED2398DB1A00730309 /* LoadingAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */; };
 		F297C098237BBC1C00EBECA3 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C088237BBC1C00EBECA3 /* ActionSheetController.swift */; };
 		F297C099237BBC1C00EBECA3 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297C08A237BBC1C00EBECA3 /* Loading.storyboard */; };
 		F297C09A237BBC1C00EBECA3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C08B237BBC1C00EBECA3 /* LoadingViewController.swift */; };
@@ -102,6 +104,8 @@
 		F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChooseClubs.storyboard; sourceTree = "<group>"; };
 		F28DAFC8237D037100846C9D /* JoinClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinClubViewController.swift; sourceTree = "<group>"; };
 		F28F74E72397DD2500730309 /* ConfirmFoundClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmFoundClubViewController.swift; sourceTree = "<group>"; };
+		F28F74EA2398DB0700730309 /* LoadingAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAccessory.swift; sourceTree = "<group>"; };
+		F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingAccessory.xib; sourceTree = "<group>"; };
 		F297C088237BBC1C00EBECA3 /* ActionSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
 		F297C08A237BBC1C00EBECA3 /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		F297C08B237BBC1C00EBECA3 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +270,15 @@
 			path = "Choose Clubs";
 			sourceTree = "<group>";
 		};
+		F28F74E92398DA2500730309 /* Loading Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */,
+				F28F74EA2398DB0700730309 /* LoadingAccessory.swift */,
+			);
+			path = "Loading Accessory";
+			sourceTree = "<group>";
+		};
 		F297C087237BBC1C00EBECA3 /* Alert Service and Accessory */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +306,7 @@
 				F297C08F237BBC1C00EBECA3 /* AlertController.swift */,
 				F297C090237BBC1C00EBECA3 /* Club Accessory */,
 				F297C093237BBC1C00EBECA3 /* Button Accessory */,
+				F28F74E92398DA2500730309 /* Loading Accessory */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -410,6 +424,7 @@
 				F297C0A1237BBC1D00EBECA3 /* ButtonAccessory.xib in Resources */,
 				F297C099237BBC1C00EBECA3 /* Loading.storyboard in Resources */,
 				F297C09F237BBC1D00EBECA3 /* ClubAccessory.xib in Resources */,
+				F28F74ED2398DB1A00730309 /* LoadingAccessory.xib in Resources */,
 				F26712A52363E71F00084354 /* Home.storyboard in Resources */,
 				F297C09C237BBC1D00EBECA3 /* Alert.storyboard in Resources */,
 				F297C0A3237BBC1D00EBECA3 /* ActionSheet.storyboard in Resources */,
@@ -485,6 +500,7 @@
 				F26EC87A236D34FF004CB6AB /* ClubSelectionTableViewController.swift in Sources */,
 				F25974B9235F8D1300A3DE51 /* String.swift in Sources */,
 				F259748F235F7A4D00A3DE51 /* AppDelegate.swift in Sources */,
+				F28F74EB2398DB0700730309 /* LoadingAccessory.swift in Sources */,
 				F25974AE235F850B00A3DE51 /* QueueAppButton.swift in Sources */,
 				F25974B5235F8BC700A3DE51 /* GreetingViewController.swift in Sources */,
 				F28F74E82397DD2500730309 /* ConfirmFoundClubViewController.swift in Sources */,

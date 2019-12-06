@@ -18,48 +18,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-Fr-bio" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="627" width="375" height="185"/>
+                                <rect key="frame" x="0.0" y="579" width="375" height="233"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qaz-pM-JRX" userLabel="Content Stack">
-                                        <rect key="frame" x="20" y="30" width="280" height="90"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="8T5-u7-qay" userLabel="Title Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="42"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECKING EMAIL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-Wp-bR4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-4m-w0X" customClass="AnimationView" customModule="Lottie">
-                                                        <rect key="frame" x="0.0" y="37" width="75" height="5"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="5" id="Hng-4N-c3m"/>
-                                                            <constraint firstAttribute="width" constant="75" id="k2n-Kd-S9P"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hang tight for a moment." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-Ut-Cht">
-                                                <rect key="frame" x="0.0" y="72" width="171.66666666666666" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHECKING EMAIL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-Wp-bR4">
+                                        <rect key="frame" x="20" y="30" width="280" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gk8-4m-w0X" customClass="AnimationView" customModule="Lottie">
+                                        <rect key="frame" x="20" y="64" width="75" height="5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="8T5-u7-qay" firstAttribute="width" secondItem="Qaz-pM-JRX" secondAttribute="width" id="ok1-Za-YCo"/>
+                                            <constraint firstAttribute="height" constant="5" id="Hng-4N-c3m"/>
+                                            <constraint firstAttribute="width" constant="75" id="k2n-Kd-S9P"/>
                                         </constraints>
-                                    </stackView>
+                                    </view>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyz-dU-Etf" customClass="QueueAppButton" customModule="Queue" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="133" width="335" height="50"/>
+                                        <color key="backgroundColor" name="Disabled Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hZq-Zn-RHo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="OKAY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueBtnTouched:" destination="f0j-JG-edd" eventType="touchUpInside" id="s7W-qW-OFz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hang tight for a moment." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hM-Ut-Cht">
+                                        <rect key="frame" x="20" y="90" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="Background"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="4Ac-Jk-uLK"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qaz-pM-JRX" secondAttribute="trailing" constant="75" id="LHj-jB-kzo"/>
-                                    <constraint firstItem="Qaz-pM-JRX" firstAttribute="top" secondItem="KP3-Fr-bio" secondAttribute="top" constant="30" id="UCg-Wk-iz6"/>
-                                    <constraint firstItem="Qaz-pM-JRX" firstAttribute="leading" secondItem="KP3-Fr-bio" secondAttribute="leading" constant="20" id="h7n-hw-S7K"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="3hM-Ut-Cht" secondAttribute="bottom" constant="84" id="5KV-RU-ED9"/>
+                                    <constraint firstItem="3hM-Ut-Cht" firstAttribute="leading" secondItem="JEv-Wp-bR4" secondAttribute="leading" id="HCz-SK-7Qy"/>
+                                    <constraint firstItem="Gk8-4m-w0X" firstAttribute="leading" secondItem="JEv-Wp-bR4" secondAttribute="leading" id="UCj-cy-aCf"/>
+                                    <constraint firstItem="JEv-Wp-bR4" firstAttribute="top" secondItem="KP3-Fr-bio" secondAttribute="top" constant="30" id="UDo-Dc-DEU"/>
+                                    <constraint firstItem="vyz-dU-Etf" firstAttribute="leading" secondItem="KP3-Fr-bio" secondAttribute="leading" constant="20" id="XxE-Eg-Ltv"/>
+                                    <constraint firstAttribute="trailing" secondItem="JEv-Wp-bR4" secondAttribute="trailing" constant="75" id="djV-xQ-foI"/>
+                                    <constraint firstAttribute="trailing" secondItem="vyz-dU-Etf" secondAttribute="trailing" constant="20" id="jkL-p9-vGu"/>
+                                    <constraint firstItem="3hM-Ut-Cht" firstAttribute="top" secondItem="JEv-Wp-bR4" secondAttribute="bottom" constant="30" id="kt5-sl-RN3"/>
+                                    <constraint firstItem="JEv-Wp-bR4" firstAttribute="leading" secondItem="KP3-Fr-bio" secondAttribute="leading" constant="20" id="lxc-l4-jky"/>
+                                    <constraint firstAttribute="trailing" secondItem="3hM-Ut-Cht" secondAttribute="trailing" constant="20" id="sZc-4w-7gr"/>
+                                    <constraint firstItem="Gk8-4m-w0X" firstAttribute="top" secondItem="JEv-Wp-bR4" secondAttribute="bottom" constant="4" id="tPS-rY-ITd"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vyz-dU-Etf" secondAttribute="bottom" constant="8" id="xDd-MK-IvF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -74,6 +91,9 @@
                     <connections>
                         <outlet property="animationView" destination="Gk8-4m-w0X" id="0AD-KT-JkF"/>
                         <outlet property="contentView" destination="KP3-Fr-bio" id="Txa-Kd-na1"/>
+                        <outlet property="continueBtn" destination="vyz-dU-Etf" id="9VE-Ut-7FZ"/>
+                        <outlet property="continueBtnHeightConstraint" destination="hZq-Zn-RHo" id="8xb-o8-VOq"/>
+                        <outlet property="distanceToBottomConstraint" destination="5KV-RU-ED9" id="AuJ-OO-STd"/>
                         <outlet property="messageLabel" destination="3hM-Ut-Cht" id="5Ef-qo-kdA"/>
                         <outlet property="titleLabel" destination="JEv-Wp-bR4" id="uYd-Rn-l2M"/>
                     </connections>
@@ -86,6 +106,9 @@
     <resources>
         <namedColor name="Background">
             <color red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Disabled Button">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

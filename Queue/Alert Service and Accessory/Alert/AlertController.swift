@@ -36,7 +36,7 @@ class AlertController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calcStackHeight()
+        accessoryStackViewHeightConstraint.constant = calcStackHeight()
         arrangeAccessoryStack()
         titleLabel.text = title?.uppercased()
     }
@@ -62,11 +62,10 @@ class AlertController: UIViewController {
     }
     
     // Calculate the total height of the stack
-    private func calcStackHeight() {
-        accessories.forEach {
-            [weak self] in
-            self?.accessoryStackViewHeightConstraint.constant += $0.height
-        }
+    private func calcStackHeight() -> CGFloat {
+        var totalHeight: CGFloat = 0.0
+        accessories.forEach { totalHeight += $0.height }
+        return totalHeight
     }
     
     // Anchor the height of each accessory and add them to stack

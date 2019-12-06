@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UB-aj-tqM">
-                                <rect key="frame" x="0.0" y="759" width="414" height="137"/>
+                                <rect key="frame" x="0.0" y="760" width="414" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IS THIS THE RIGHT CLUB?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-nH-c1X">
-                                        <rect key="frame" x="20" y="31" width="250" height="60"/>
+                                        <rect key="frame" x="20" y="30" width="250" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="wqa-IK-wcr"/>
                                         </constraints>
@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqE-Kk-iyx">
-                                        <rect key="frame" x="350" y="53" width="44" height="44"/>
+                                        <rect key="frame" x="350" y="52" width="44" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Hdk-Ik-F8G"/>
                                             <constraint firstAttribute="width" secondItem="oqE-Kk-iyx" secondAttribute="height" multiplier="1:1" id="bg6-Oz-s30"/>
@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-0Q-VUC">
-                                        <rect key="frame" x="0.0" y="95" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="94" width="414" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="999" id="jsc-Xl-nRe"/>
                                         </constraints>
@@ -52,7 +52,7 @@
                                 <color key="backgroundColor" name="Background"/>
                                 <constraints>
                                     <constraint firstAttribute="bottomMargin" secondItem="SfJ-0Q-VUC" secondAttribute="bottom" id="9GI-gJ-vo8"/>
-                                    <constraint firstItem="x3O-nH-c1X" firstAttribute="top" secondItem="1UB-aj-tqM" secondAttribute="top" constant="31" id="9sq-5j-roq"/>
+                                    <constraint firstItem="x3O-nH-c1X" firstAttribute="top" secondItem="1UB-aj-tqM" secondAttribute="top" constant="30" id="9sq-5j-roq"/>
                                     <constraint firstItem="x3O-nH-c1X" firstAttribute="leading" secondItem="1UB-aj-tqM" secondAttribute="leading" constant="20" id="Kkf-V6-K4b"/>
                                     <constraint firstItem="SfJ-0Q-VUC" firstAttribute="leading" secondItem="1UB-aj-tqM" secondAttribute="leading" id="TrY-hC-Rn4"/>
                                     <constraint firstAttribute="trailing" secondItem="SfJ-0Q-VUC" secondAttribute="trailing" id="UeH-vP-R56"/>
