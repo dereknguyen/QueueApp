@@ -21,7 +21,7 @@ class ConfirmFoundClubViewController: QueueUI.ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        continueBtn.setButton(title: "Yes, This is right", state: .active)
+        continueBtn.setButton(title: "Yes, This is right", style: .active)
     }
     
     @IBAction func continueBtnTouched(_ sender: QueueUI.Button) {

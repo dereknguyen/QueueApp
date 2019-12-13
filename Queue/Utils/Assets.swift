@@ -11,7 +11,15 @@ struct Icons {
     static let rightAngleBracket        = UIImage(named: "Right Angle Bracket")
     static let rightAngleBracketSmall   = UIImage(named: "Right Angle Bracket Small")
     static let x                        = UIImage(named: "X Button")
+    static let xSmall                   = UIImage(named: "X Button Small")
+    static let checkmark                = UIImage(named: "Checkmark")
+    static let edit                     = UIImage(named: "Edit")
+    static let partner                  = UIImage(named: "Partner")
+    static let singlePlayer             = UIImage(named: "Single Player")
+    static let deletePlayer             = UIImage(named: "Delete Player")
 }
+
+
 
 struct LoadingMessage {
     static let email = (title: "CHECKING EMAIL", msg: "Hang tight for a moment.")

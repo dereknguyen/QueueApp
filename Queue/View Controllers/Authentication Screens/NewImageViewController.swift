@@ -20,7 +20,7 @@ class NewImageViewController: UIViewController, UserSelectImageController {
     private func setupView() {
         chooseImgBtn.layer.borderWidth = 4
         chooseImgBtn.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
-        continueButton.setButton(state: .disabled)
+        continueButton.setButton(style: .disabled)
     }
     
     private func setupImagePicker() {
@@ -51,7 +51,7 @@ extension NewImageViewController: UIImagePickerControllerDelegate, UINavigationC
             userImageView.image = image
             chooseImgBtn.setImage(UIImage(), for: .normal)
             chooseImgBtn.layer.borderWidth = 0.0
-            continueButton.setButton(state: .active)
+            continueButton.setButton(style: .active)
         }
         dismiss(animated: true)
     }

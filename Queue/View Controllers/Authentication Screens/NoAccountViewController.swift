@@ -14,7 +14,7 @@ class NoAccountViewController: QueueUI.ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contBtn.setButton(state: .active)
+        contBtn.setButton(style: .active)
     }
     
     override func viewWillAppear(_ animated: Bool) {

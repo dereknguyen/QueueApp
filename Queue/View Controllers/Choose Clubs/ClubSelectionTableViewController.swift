@@ -17,11 +17,11 @@ class ClubSelectionTableViewController: UITableViewController {
 
     private func setupNavigationController() {
         self.navigationItem.rightBarButtonItem = self.editButtonItem
-        let backImage = Icons.x!.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0))
+        let backImage = Icons.x!.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -12, bottom: 0, right: 0))
         let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
         navigationController?.navigationBar.setupNavigationBar()
-        navigationController?.navigationBar.layoutMargins.left = 24
+        navigationController?.navigationBar.layoutMargins.left = 16
     }
     
     @objc func backButtonTapped() {

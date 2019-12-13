@@ -17,7 +17,7 @@ class NewInputViewController: QueueUI.ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contBtn.setButton(state: .disabled)
+        contBtn.setButton(style: .disabled)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +66,7 @@ class NewInputViewController: QueueUI.ViewController {
     
     @IBAction func editingDidChanged(_ sender: UITextField) {
         guard let first = firstNameTextField.text, let last = lastNameTextField.text else { return }
-        !first.isEmpty && !last.isEmpty ? contBtn.setButton(state: .active) : contBtn.setButton(state: .disabled)
+        !first.isEmpty && !last.isEmpty ? contBtn.setButton(style: .active) : contBtn.setButton(style: .disabled)
     }
 }
 

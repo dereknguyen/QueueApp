@@ -27,7 +27,7 @@ extension UIColor {
     }
     
     class var alertBackgroundOverlay: UIColor {
-        return UIColor.black.withAlphaComponent(0.3)
+        return UIColor.black.withAlphaComponent(0.5)
     }
     
     class var textColor: UIColor {

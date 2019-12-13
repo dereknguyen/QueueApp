@@ -36,7 +36,7 @@ class EmailCheckViewController: QueueUI.SingleTextFieldViewController {
     
     private func setupUI() {
         domainSuggestionStk.isHidden = true
-        continueButton.setButton(state: .disabled)
+        continueButton.setButton(style: .disabled)
         
         textField = emailAddressTextField
         btnBottomConstraint = continueButtonBottomConstraint
@@ -46,7 +46,7 @@ class EmailCheckViewController: QueueUI.SingleTextFieldViewController {
         guard let email = emailAddressTextField.text else { return }
         
         // Check if email is valid, activate continue button.
-        email.isValidEmail() ? continueButton.setButton(state: .active) : continueButton.setButton(state: .disabled)
+        email.isValidEmail() ? continueButton.setButton(style: .active) : continueButton.setButton(style: .disabled)
     
         // Start string range of interest after first occurance of "@" symbol
         if let range = email.range(of: "@") {
@@ -88,31 +88,32 @@ class EmailCheckViewController: QueueUI.SingleTextFieldViewController {
             emailAddressTextField.text = username + "@" + domain
             
             if let email = emailAddressTextField.text, email.isValidEmail() {
-                continueButton.setButton(state: .active)
+                continueButton.setButton(style: .active)
             }
         }
     }
     
     @IBAction func continueTouched(_ sender: UIButton) {
         // Loading Screen View Controller
-        let loading = AlertService.loading(title: LoadingMessage.email.title,
-                                           message: LoadingMessage.email.msg)
+        let loadingVC = AlertServiceController.makeAlertController()
+        loadingVC.setText(title: LoadingMessage.email.title, message: LoadingMessage.email.msg)
         
         if let email = emailAddressTextField.text {
-            present(loading, animated: true) {
+            
+            loadingVC.present(as: .Loading, in: self) {
                 [weak self] in
                 guard let this = self else { fatalError() }
                 
                 // Check if account exist
                 if this.userAccountExist(email: email) {
-                    loading.dismiss(animated: true) {
+                    loadingVC.dismiss(animated: true) {
                         DispatchQueue.main.async {
                             this.performSegue(withIdentifier: "emailCheckToLogin", sender: nil)
                         }
                     }
                 }
                 else {
-                    loading.dismiss(animated: true) {
+                    loadingVC.dismiss(animated: true) {
                         DispatchQueue.main.async {
                             // Direct user to new account flow
                             this.performSegue(withIdentifier: "emailCheckToNoAccount", sender: nil)

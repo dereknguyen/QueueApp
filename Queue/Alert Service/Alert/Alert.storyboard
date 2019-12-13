@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vBo-og-2C3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Controller-->
+        <scene sceneID="dp7-YB-nel">
+            <objects>
+                <viewController storyboardIdentifier="Alert" modalPresentationStyle="overFullScreen" id="vBo-og-2C3" customClass="AlertController" customModule="Queue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r7T-aB-y3w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UB-aj-tqM">
+                                <rect key="frame" x="0.0" y="790" width="414" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3O-nH-c1X">
+                                        <rect key="frame" x="20" y="30" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="wqa-IK-wcr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqE-Kk-iyx">
+                                        <rect key="frame" x="350" y="22" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Hdk-Ik-F8G"/>
+                                            <constraint firstAttribute="width" secondItem="oqE-Kk-iyx" secondAttribute="height" multiplier="1:1" id="bg6-Oz-s30"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" image="X Button"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="vBo-og-2C3" eventType="touchUpInside" id="Slc-9h-VHM"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SfJ-0Q-VUC">
+                                        <rect key="frame" x="0.0" y="64" width="414" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" id="jsc-Xl-nRe"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="SfJ-0Q-VUC" secondAttribute="bottom" id="9GI-gJ-vo8"/>
+                                    <constraint firstItem="x3O-nH-c1X" firstAttribute="top" secondItem="1UB-aj-tqM" secondAttribute="top" constant="30" id="9sq-5j-roq"/>
+                                    <constraint firstItem="x3O-nH-c1X" firstAttribute="leading" secondItem="1UB-aj-tqM" secondAttribute="leading" constant="20" id="Kkf-V6-K4b"/>
+                                    <constraint firstItem="SfJ-0Q-VUC" firstAttribute="leading" secondItem="1UB-aj-tqM" secondAttribute="leading" id="TrY-hC-Rn4"/>
+                                    <constraint firstAttribute="trailing" secondItem="SfJ-0Q-VUC" secondAttribute="trailing" id="UeH-vP-R56"/>
+                                    <constraint firstAttribute="trailing" secondItem="oqE-Kk-iyx" secondAttribute="trailing" constant="20" id="Veb-UZ-NhO"/>
+                                    <constraint firstItem="oqE-Kk-iyx" firstAttribute="baseline" secondItem="x3O-nH-c1X" secondAttribute="baseline" constant="12" id="fDR-BV-zta"/>
+                                    <constraint firstItem="SfJ-0Q-VUC" firstAttribute="top" secondItem="x3O-nH-c1X" secondAttribute="bottom" constant="4" id="lAg-rL-muB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1UB-aj-tqM" secondAttribute="bottom" id="Uu4-Wu-VDJ"/>
+                            <constraint firstItem="1UB-aj-tqM" firstAttribute="leading" secondItem="iCm-ER-qJT" secondAttribute="leading" id="X2O-IV-Csk"/>
+                            <constraint firstItem="1UB-aj-tqM" firstAttribute="trailing" secondItem="iCm-ER-qJT" secondAttribute="trailing" id="hxj-sj-pvW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iCm-ER-qJT"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZSX-wH-405" appends="YES" id="Q1i-IH-02c"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="accessoryStackView" destination="SfJ-0Q-VUC" id="W8z-sV-kYq"/>
+                        <outlet property="accessoryStackViewHeightConstraint" destination="jsc-Xl-nRe" id="un6-9P-hbW"/>
+                        <outlet property="containerView" destination="1UB-aj-tqM" id="pbC-dM-e6r"/>
+                        <outlet property="titleLabel" destination="x3O-nH-c1X" id="V04-8r-0Bs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBk-sQ-vcN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ZSX-wH-405">
+                    <connections>
+                        <action selector="viewDidTapped:" destination="vBo-og-2C3" id="OzV-Ug-Ami"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-130.43478260869566" y="30.803571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="X Button" width="44" height="44"/>
+        <namedColor name="Background">
+            <color red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

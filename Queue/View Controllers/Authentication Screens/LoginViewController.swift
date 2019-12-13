@@ -23,7 +23,7 @@ class LoginViewController: QueueUI.ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginBtn.setButton(state: .disabled)
+        loginBtn.setButton(style: .disabled)
         addObserverAndTarget()
     }
     
@@ -57,7 +57,7 @@ class LoginViewController: QueueUI.ViewController {
     // Password Req: 6 Characters minimum
     @objc func isValidPassword() {
         guard let count = passwordTextField.text?.count else { return }
-        count > 5 ? loginBtn.setButton(state: .active) : loginBtn.setButton(state: .disabled)
+        count > 5 ? loginBtn.setButton(style: .active) : loginBtn.setButton(style: .disabled)
     }
     
     // Handle UI contents to avoid keyboard when keyboard show or hide.

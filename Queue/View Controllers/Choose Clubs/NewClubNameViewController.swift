@@ -11,26 +11,27 @@ class NewClubNameViewController: QueueUI.SingleTextFieldViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        continueBtn.setButton(title: "Check Name Availability", state: .disabled)
+        continueBtn.setButton(title: "Check Name Availability", style: .disabled)
         textField = clubNameTextField
         btnBottomConstraint = btnContainerBottomConstraint
     }
 
     @IBAction func editingChanged(_ sender: UITextField) {
         if let count = clubNameTextField.text?.count {
-            count > 0 ? continueBtn.setButton(state: .active) : continueBtn.setButton(state: .disabled)
+            count > 0 ? continueBtn.setButton(style: .active) : continueBtn.setButton(style: .disabled)
         }
     }
     
     @IBAction func continuePressed(_ sender: UIButton) {
         clubNameTextField.endEditing(true)
         _ = clubNameTextField.text?.replacingOccurrences(of: " ", with: "-")
-        
-        let loadingVC = AlertService.loading(
+    
+        let loadingVC = AlertServiceController.makeAlertController()
+        loadingVC.setText(
             title: "Verifying Club Name",
             message: "Hang tight for a moment while we verify that it is a unique name."
         )
-        loadingVC.present(in: self)
+        loadingVC.present(as: .Loading, in: self)
         
         // TODO: CHECK WITH SERVER IF EXIST
         

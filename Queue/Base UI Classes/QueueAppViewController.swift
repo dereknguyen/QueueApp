@@ -25,7 +25,7 @@ class QueueAppViewController: UIViewController {
     }
     
     func setBackButton(action: Selector? = nil) {
-        let backImage = Icons.leftArrow?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0))
+        let backImage = Icons.leftArrow?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -12, bottom: 0, right: 0))
         let backButton = UIBarButtonItem(image: backImage, style: .plain, target: self, action: action)
         navigationItem.leftBarButtonItem = backButton
     }

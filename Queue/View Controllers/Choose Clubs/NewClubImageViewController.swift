@@ -1,7 +1,7 @@
 import UIKit
 import Photos
 
-class NewClubImageViewController: UIViewController, UserSelectImageController {
+class NewClubImageViewController: QueueUI.ViewController, UserSelectImageController {
     
     var imgPickerController: UIImagePickerController!
     
@@ -25,7 +25,7 @@ class NewClubImageViewController: UIViewController, UserSelectImageController {
     func setupView() {
         selectImageButton.layer.borderWidth = 4
         selectImageButton.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
-        continueButton.setButton(title: "Create Club", state: .disabled)
+        continueButton.setButton(title: "Create Club", style: .disabled)
     }
     
     func setupImagePicker() {
@@ -48,7 +48,7 @@ extension NewClubImageViewController: UIImagePickerControllerDelegate, UINavigat
             clubLogoImageView.image = image
             selectImageButton.setImage(UIImage(), for: .normal)
             selectImageButton.layer.borderWidth = 0.0
-            continueButton.setButton(state: .active)
+            continueButton.setButton(style: .active)
         }
         dismiss(animated: true)
     }

@@ -51,15 +51,6 @@ class CourtCell: UITableViewCell {
 
         }
     }
-
-//    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
-//        if highlighted {
-//            cardView.backgroundColor = UIColor.lightGray
-//        }
-//        else {
-//            cardView.backgroundColor = .background
-//        }
-//    }
     
     private func setSelected() {
         gradientLayer.frame = containerView.frame

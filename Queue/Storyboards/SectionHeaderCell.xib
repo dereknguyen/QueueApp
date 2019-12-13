@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ndb-sG-agh" customClass="SectionHeaderCell" customModule="Queue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ndb-sG-agh" id="3uO-ez-caI">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgl-MJ-0Pe">
+                        <rect key="frame" x="259" y="15" width="100" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="3MG-yS-LIb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="Edit Order">
+                            <color key="titleColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="editDidTapped:" destination="Ndb-sG-agh" eventType="touchUpInside" id="pbt-rM-LM7"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8V-60-IQq">
+                        <rect key="frame" x="16" y="43" width="343" height="1"/>
+                        <color key="backgroundColor" name="Button Disabled"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bcY-jT-0an"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmA-38-Uk5">
+                        <rect key="frame" x="16" y="23" width="35.5" height="16"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" name="Background"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="D8V-60-IQq" secondAttribute="bottom" id="4qu-to-FN8"/>
+                    <constraint firstItem="EmA-38-Uk5" firstAttribute="baseline" secondItem="Pgl-MJ-0Pe" secondAttribute="baseline" id="7hc-D6-0jS"/>
+                    <constraint firstItem="Pgl-MJ-0Pe" firstAttribute="trailing" secondItem="D8V-60-IQq" secondAttribute="trailing" id="Cm2-Qf-K0G"/>
+                    <constraint firstItem="D8V-60-IQq" firstAttribute="leading" secondItem="3uO-ez-caI" secondAttribute="leading" constant="16" id="Oaa-Py-q7T"/>
+                    <constraint firstItem="D8V-60-IQq" firstAttribute="top" secondItem="Pgl-MJ-0Pe" secondAttribute="bottom" id="WH5-MK-76G"/>
+                    <constraint firstAttribute="trailing" secondItem="D8V-60-IQq" secondAttribute="trailing" constant="16" id="bon-ad-zId"/>
+                    <constraint firstItem="EmA-38-Uk5" firstAttribute="leading" secondItem="D8V-60-IQq" secondAttribute="leading" id="vJN-rm-t7U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="editButton" destination="Pgl-MJ-0Pe" id="bzk-pY-b0Y"/>
+                <outlet property="sectionLabel" destination="EmA-38-Uk5" id="5Nl-Wj-nBY"/>
+                <outlet property="separatorView" destination="D8V-60-IQq" id="PNm-mH-KQW"/>
+            </connections>
+            <point key="canvasLocation" x="378" y="310"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.97000002861022949" green="0.97000002861022949" blue="0.97000002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Button Disabled">
+            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

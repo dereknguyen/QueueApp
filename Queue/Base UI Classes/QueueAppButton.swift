@@ -2,7 +2,7 @@ import UIKit
 
 class QueueAppButton: UIButton {
     
-    enum ActionState {
+    enum Style {
         case normal
         case disabled
         case active
@@ -15,7 +15,7 @@ class QueueAppButton: UIButton {
         return CGRect(x: frame.width - frame.height, y: 0, width: frame.height, height: frame.height)
     }
     
-    func setButton(title: String? = nil, state: QueueAppButton.ActionState) {
+    func setButton(title: String? = nil, style: QueueAppButton.Style) {
         
         DispatchQueue.main.async {
             [weak self] in
@@ -29,14 +29,13 @@ class QueueAppButton: UIButton {
             this.layer.borderColor = UIColor.clear.cgColor
             this.gradientLayer.removeFromSuperlayer()
             
-            switch state {
+            switch style {
             case .active:       this.setActive()
             case .destructive:  this.setDestructive()
             case .disabled:     this.setDisabled()
             case .normal:       this.setNormal()
             }
         }
-
     }
     
     private func setDisabled() {

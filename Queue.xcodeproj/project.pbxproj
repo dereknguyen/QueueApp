@@ -13,6 +13,9 @@
 		F20E3D3E2362D6D800C32893 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D3D2362D6D800C32893 /* NewPasswordViewController.swift */; };
 		F20E3D412362D71000C32893 /* NewImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20E3D402362D70F00C32893 /* NewImageViewController.swift */; };
 		F2170D26236AC377005448BD /* ClubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170D25236AC377005448BD /* ClubTableViewController.swift */; };
+		F245B10F239B32C500ED6881 /* SectionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245B10E239B32C500ED6881 /* SectionHeaderCell.swift */; };
+		F245B111239B52E900ED6881 /* BasicSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245B110239B52E900ED6881 /* BasicSettingCell.swift */; };
+		F245B113239B90B400ED6881 /* CourtSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F245B112239B90B400ED6881 /* CourtSettingCell.swift */; };
 		F259748F235F7A4D00A3DE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259748E235F7A4D00A3DE51 /* AppDelegate.swift */; };
 		F2597491235F7A4D00A3DE51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */; };
 		F259749B235F7A4E00A3DE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2597499235F7A4E00A3DE51 /* LaunchScreen.storyboard */; };
@@ -46,20 +49,26 @@
 		F28DAFC7237CFA9900846C9D /* ChooseClubs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */; };
 		F28DAFC9237D037100846C9D /* JoinClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28DAFC8237D037100846C9D /* JoinClubViewController.swift */; };
 		F28F74E82397DD2500730309 /* ConfirmFoundClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F74E72397DD2500730309 /* ConfirmFoundClubViewController.swift */; };
-		F28F74EB2398DB0700730309 /* LoadingAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28F74EA2398DB0700730309 /* LoadingAccessory.swift */; };
-		F28F74ED2398DB1A00730309 /* LoadingAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */; };
 		F297C098237BBC1C00EBECA3 /* ActionSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C088237BBC1C00EBECA3 /* ActionSheetController.swift */; };
-		F297C099237BBC1C00EBECA3 /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297C08A237BBC1C00EBECA3 /* Loading.storyboard */; };
-		F297C09A237BBC1C00EBECA3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C08B237BBC1C00EBECA3 /* LoadingViewController.swift */; };
+		F297C099237BBC1C00EBECA3 /* AlertServiceController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297C08A237BBC1C00EBECA3 /* AlertServiceController.storyboard */; };
+		F297C09A237BBC1C00EBECA3 /* AlertServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C08B237BBC1C00EBECA3 /* AlertServiceController.swift */; };
 		F297C09B237BBC1D00EBECA3 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C08C237BBC1C00EBECA3 /* AlertService.swift */; };
-		F297C09C237BBC1D00EBECA3 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297C08E237BBC1C00EBECA3 /* Alert.storyboard */; };
-		F297C09D237BBC1D00EBECA3 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C08F237BBC1C00EBECA3 /* AlertController.swift */; };
-		F297C09E237BBC1D00EBECA3 /* ClubAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C091237BBC1C00EBECA3 /* ClubAccessory.swift */; };
-		F297C09F237BBC1D00EBECA3 /* ClubAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = F297C092237BBC1C00EBECA3 /* ClubAccessory.xib */; };
-		F297C0A0237BBC1D00EBECA3 /* ButtonAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C094237BBC1C00EBECA3 /* ButtonAccessory.swift */; };
-		F297C0A1237BBC1D00EBECA3 /* ButtonAccessory.xib in Resources */ = {isa = PBXBuildFile; fileRef = F297C095237BBC1C00EBECA3 /* ButtonAccessory.xib */; };
 		F297C0A2237BBC1D00EBECA3 /* ActionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F297C096237BBC1C00EBECA3 /* ActionTableCell.swift */; };
 		F297C0A3237BBC1D00EBECA3 /* ActionSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F297C097237BBC1C00EBECA3 /* ActionSheet.storyboard */; };
+		F2B8E810239F225E00CE72C0 /* SectionFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8E80E239F225E00CE72C0 /* SectionFooterCell.swift */; };
+		F2B8E811239F225E00CE72C0 /* SectionFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B8E80F239F225E00CE72C0 /* SectionFooterCell.xib */; };
+		F2B8E814239F336200CE72C0 /* SwitchControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8E812239F336200CE72C0 /* SwitchControlCell.swift */; };
+		F2B8E815239F336200CE72C0 /* SwitchControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B8E813239F336200CE72C0 /* SwitchControlCell.xib */; };
+		F2BF4849239B01130052A648 /* ClubSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BF4848239B01130052A648 /* ClubSettingTableViewController.swift */; };
+		F2BF484B239B05CE0052A648 /* QueueAppTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BF484A239B05CE0052A648 /* QueueAppTableViewController.swift */; };
+		F2C1B754239F1EF800D96F25 /* ClubSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C1B753239F1EF800D96F25 /* ClubSetting.storyboard */; };
+		F2C1B757239F200000D96F25 /* CourtSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1B756239F200000D96F25 /* CourtSettingsTableViewController.swift */; };
+		F2C2FBDC23A10F200065AE1E /* SelectPartnerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2FBDB23A10F200065AE1E /* SelectPartnerTableViewController.swift */; };
+		F2C2FBDF23A10F850065AE1E /* PlayerListEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C2FBDD23A10F850065AE1E /* PlayerListEntryCell.swift */; };
+		F2C2FBE023A10F850065AE1E /* PlayerListEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C2FBDE23A10F850065AE1E /* PlayerListEntryCell.xib */; };
+		F2F1D3DC239E7666006D346A /* BasicSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F1D3DB239E7666006D346A /* BasicSettingCell.xib */; };
+		F2F1D3DE239E800D006D346A /* CourtSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F1D3DD239E800D006D346A /* CourtSettingCell.xib */; };
+		F2FE9798239E552D0077D3AF /* SectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FE9797239E552D0077D3AF /* SectionHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +78,9 @@
 		F20E3D3D2362D6D800C32893 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
 		F20E3D402362D70F00C32893 /* NewImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewImageViewController.swift; sourceTree = "<group>"; };
 		F2170D25236AC377005448BD /* ClubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTableViewController.swift; sourceTree = "<group>"; };
+		F245B10E239B32C500ED6881 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
+		F245B110239B52E900ED6881 /* BasicSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSettingCell.swift; sourceTree = "<group>"; };
+		F245B112239B90B400ED6881 /* CourtSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtSettingCell.swift; sourceTree = "<group>"; };
 		F259748B235F7A4D00A3DE51 /* Queue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Queue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F259748E235F7A4D00A3DE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,20 +116,26 @@
 		F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChooseClubs.storyboard; sourceTree = "<group>"; };
 		F28DAFC8237D037100846C9D /* JoinClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinClubViewController.swift; sourceTree = "<group>"; };
 		F28F74E72397DD2500730309 /* ConfirmFoundClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmFoundClubViewController.swift; sourceTree = "<group>"; };
-		F28F74EA2398DB0700730309 /* LoadingAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAccessory.swift; sourceTree = "<group>"; };
-		F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingAccessory.xib; sourceTree = "<group>"; };
 		F297C088237BBC1C00EBECA3 /* ActionSheetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetController.swift; sourceTree = "<group>"; };
-		F297C08A237BBC1C00EBECA3 /* Loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
-		F297C08B237BBC1C00EBECA3 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F297C08A237BBC1C00EBECA3 /* AlertServiceController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AlertServiceController.storyboard; sourceTree = "<group>"; };
+		F297C08B237BBC1C00EBECA3 /* AlertServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertServiceController.swift; sourceTree = "<group>"; };
 		F297C08C237BBC1C00EBECA3 /* AlertService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
-		F297C08E237BBC1C00EBECA3 /* Alert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
-		F297C08F237BBC1C00EBECA3 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
-		F297C091237BBC1C00EBECA3 /* ClubAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubAccessory.swift; sourceTree = "<group>"; };
-		F297C092237BBC1C00EBECA3 /* ClubAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubAccessory.xib; sourceTree = "<group>"; };
-		F297C094237BBC1C00EBECA3 /* ButtonAccessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonAccessory.swift; sourceTree = "<group>"; };
-		F297C095237BBC1C00EBECA3 /* ButtonAccessory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonAccessory.xib; sourceTree = "<group>"; };
 		F297C096237BBC1C00EBECA3 /* ActionTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTableCell.swift; sourceTree = "<group>"; };
 		F297C097237BBC1C00EBECA3 /* ActionSheet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheet.storyboard; sourceTree = "<group>"; };
+		F2B8E80E239F225E00CE72C0 /* SectionFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooterCell.swift; sourceTree = "<group>"; };
+		F2B8E80F239F225E00CE72C0 /* SectionFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionFooterCell.xib; sourceTree = "<group>"; };
+		F2B8E812239F336200CE72C0 /* SwitchControlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchControlCell.swift; sourceTree = "<group>"; };
+		F2B8E813239F336200CE72C0 /* SwitchControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchControlCell.xib; sourceTree = "<group>"; };
+		F2BF4848239B01130052A648 /* ClubSettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubSettingTableViewController.swift; sourceTree = "<group>"; };
+		F2BF484A239B05CE0052A648 /* QueueAppTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueAppTableViewController.swift; sourceTree = "<group>"; };
+		F2C1B753239F1EF800D96F25 /* ClubSetting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClubSetting.storyboard; sourceTree = "<group>"; };
+		F2C1B756239F200000D96F25 /* CourtSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtSettingsTableViewController.swift; sourceTree = "<group>"; };
+		F2C2FBDB23A10F200065AE1E /* SelectPartnerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPartnerTableViewController.swift; sourceTree = "<group>"; };
+		F2C2FBDD23A10F850065AE1E /* PlayerListEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListEntryCell.swift; sourceTree = "<group>"; };
+		F2C2FBDE23A10F850065AE1E /* PlayerListEntryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerListEntryCell.xib; sourceTree = "<group>"; };
+		F2F1D3DB239E7666006D346A /* BasicSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicSettingCell.xib; sourceTree = "<group>"; };
+		F2F1D3DD239E800D006D346A /* CourtSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourtSettingCell.xib; sourceTree = "<group>"; };
+		F2FE9797239E552D0077D3AF /* SectionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCell.xib; sourceTree = "<group>"; };
 		F9D6CD04378241B72C058134 /* Pods-Queue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Queue.debug.xcconfig"; path = "Target Support Files/Pods-Queue/Pods-Queue.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD21EBF52ED16236AA5D426 /* Pods_Queue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Queue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +161,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F2282E7B23A0526B0026E48D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F25974B1235F874F00A3DE51 /* Authentication.storyboard */,
+				F26712A42363E71F00084354 /* Home.storyboard */,
+				F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */,
+				F2C1B753239F1EF800D96F25 /* ClubSetting.storyboard */,
+				F2FE9797239E552D0077D3AF /* SectionHeaderCell.xib */,
+				F2F1D3DB239E7666006D346A /* BasicSettingCell.xib */,
+				F2F1D3DD239E800D006D346A /* CourtSettingCell.xib */,
+				F2B8E80F239F225E00CE72C0 /* SectionFooterCell.xib */,
+				F2B8E813239F336200CE72C0 /* SwitchControlCell.xib */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		F2597482235F7A4D00A3DE51 = {
 			isa = PBXGroup;
 			children = (
@@ -166,9 +200,11 @@
 			children = (
 				F259748E235F7A4D00A3DE51 /* AppDelegate.swift */,
 				F2597490235F7A4D00A3DE51 /* SceneDelegate.swift */,
+				F2282E7B23A0526B0026E48D /* Storyboards */,
 				F297C0A5237BBD4100EBECA3 /* View Controllers */,
 				F27623A0237D416E00C4853F /* Cells */,
-				F297C087237BBC1C00EBECA3 /* Alert Service and Accessory */,
+				F297C0A4237BBC4400EBECA3 /* Action Sheet */,
+				F297C087237BBC1C00EBECA3 /* Alert Service */,
 				F27CBE7A2397608F00CF016D /* Protocols */,
 				F25974BB235F8D4400A3DE51 /* Base UI Classes */,
 				F25974BA235F8D2000A3DE51 /* Extensions */,
@@ -193,7 +229,6 @@
 		F25974B3235F8AA700A3DE51 /* Authentication Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F25974B1235F874F00A3DE51 /* Authentication.storyboard */,
 				F25974B4235F8BC700A3DE51 /* GreetingViewController.swift */,
 				F25974BE235FA4D900A3DE51 /* EmailCheckViewController.swift */,
 				F25974C0235FC38900A3DE51 /* LoginViewController.swift */,
@@ -226,6 +261,7 @@
 				F27623A7237E1C0500C4853F /* QueueAppSingleTextFieldViewController.swift */,
 				F25974AC235F850B00A3DE51 /* QueueAppButton.swift */,
 				F25974AB235F850B00A3DE51 /* QueueAppTextField.swift */,
+				F2BF484A239B05CE0052A648 /* QueueAppTableViewController.swift */,
 			);
 			path = "Base UI Classes";
 			sourceTree = "<group>";
@@ -233,8 +269,8 @@
 		F26712A32363E6FE00084354 /* Home Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F26712A42363E71F00084354 /* Home.storyboard */,
 				F2170D25236AC377005448BD /* ClubTableViewController.swift */,
+				F2C2FBDB23A10F200065AE1E /* SelectPartnerTableViewController.swift */,
 			);
 			path = "Home Screens";
 			sourceTree = "<group>";
@@ -245,6 +281,13 @@
 				F27E0F47236AF794008DFCE8 /* CourtCell.swift */,
 				F2860D8A236D683300BEFB34 /* ClubCell.swift */,
 				F2860D8C236D776C00BEFB34 /* AddNewClubStaticCell.swift */,
+				F245B10E239B32C500ED6881 /* SectionHeaderCell.swift */,
+				F245B110239B52E900ED6881 /* BasicSettingCell.swift */,
+				F245B112239B90B400ED6881 /* CourtSettingCell.swift */,
+				F2B8E80E239F225E00CE72C0 /* SectionFooterCell.swift */,
+				F2B8E812239F336200CE72C0 /* SwitchControlCell.swift */,
+				F2C2FBDD23A10F850065AE1E /* PlayerListEntryCell.swift */,
+				F2C2FBDE23A10F850065AE1E /* PlayerListEntryCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -260,7 +303,6 @@
 		F28DAFCA237D258F00846C9D /* Choose Clubs */ = {
 			isa = PBXGroup;
 			children = (
-				F28DAFC6237CFA9900846C9D /* ChooseClubs.storyboard */,
 				F26EC879236D34FF004CB6AB /* ClubSelectionTableViewController.swift */,
 				F28DAFC8237D037100846C9D /* JoinClubViewController.swift */,
 				F28F74E72397DD2500730309 /* ConfirmFoundClubViewController.swift */,
@@ -270,63 +312,14 @@
 			path = "Choose Clubs";
 			sourceTree = "<group>";
 		};
-		F28F74E92398DA2500730309 /* Loading Accessory */ = {
+		F297C087237BBC1C00EBECA3 /* Alert Service */ = {
 			isa = PBXGroup;
 			children = (
-				F28F74EC2398DB1A00730309 /* LoadingAccessory.xib */,
-				F28F74EA2398DB0700730309 /* LoadingAccessory.swift */,
-			);
-			path = "Loading Accessory";
-			sourceTree = "<group>";
-		};
-		F297C087237BBC1C00EBECA3 /* Alert Service and Accessory */ = {
-			isa = PBXGroup;
-			children = (
+				F297C08A237BBC1C00EBECA3 /* AlertServiceController.storyboard */,
+				F297C08B237BBC1C00EBECA3 /* AlertServiceController.swift */,
 				F297C08C237BBC1C00EBECA3 /* AlertService.swift */,
-				F297C089237BBC1C00EBECA3 /* Loading */,
-				F297C08D237BBC1C00EBECA3 /* Alert */,
-				F297C0A4237BBC4400EBECA3 /* Action Sheet */,
 			);
-			path = "Alert Service and Accessory";
-			sourceTree = "<group>";
-		};
-		F297C089237BBC1C00EBECA3 /* Loading */ = {
-			isa = PBXGroup;
-			children = (
-				F297C08A237BBC1C00EBECA3 /* Loading.storyboard */,
-				F297C08B237BBC1C00EBECA3 /* LoadingViewController.swift */,
-			);
-			path = Loading;
-			sourceTree = "<group>";
-		};
-		F297C08D237BBC1C00EBECA3 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				F297C08E237BBC1C00EBECA3 /* Alert.storyboard */,
-				F297C08F237BBC1C00EBECA3 /* AlertController.swift */,
-				F297C090237BBC1C00EBECA3 /* Club Accessory */,
-				F297C093237BBC1C00EBECA3 /* Button Accessory */,
-				F28F74E92398DA2500730309 /* Loading Accessory */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
-		F297C090237BBC1C00EBECA3 /* Club Accessory */ = {
-			isa = PBXGroup;
-			children = (
-				F297C092237BBC1C00EBECA3 /* ClubAccessory.xib */,
-				F297C091237BBC1C00EBECA3 /* ClubAccessory.swift */,
-			);
-			path = "Club Accessory";
-			sourceTree = "<group>";
-		};
-		F297C093237BBC1C00EBECA3 /* Button Accessory */ = {
-			isa = PBXGroup;
-			children = (
-				F297C095237BBC1C00EBECA3 /* ButtonAccessory.xib */,
-				F297C094237BBC1C00EBECA3 /* ButtonAccessory.swift */,
-			);
-			path = "Button Accessory";
+			path = "Alert Service";
 			sourceTree = "<group>";
 		};
 		F297C0A4237BBC4400EBECA3 /* Action Sheet */ = {
@@ -345,8 +338,18 @@
 				F25974B3235F8AA700A3DE51 /* Authentication Screens */,
 				F26712A32363E6FE00084354 /* Home Screens */,
 				F28DAFCA237D258F00846C9D /* Choose Clubs */,
+				F2BF4847239B00010052A648 /* Club Settings */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F2BF4847239B00010052A648 /* Club Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F2BF4848239B01130052A648 /* ClubSettingTableViewController.swift */,
+				F2C1B756239F200000D96F25 /* CourtSettingsTableViewController.swift */,
+			);
+			path = "Club Settings";
 			sourceTree = "<group>";
 		};
 		F2DC9640B38059A3571D3028 /* Frameworks */ = {
@@ -418,17 +421,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25974B2235F874F00A3DE51 /* Authentication.storyboard in Resources */,
+				F2B8E815239F336200CE72C0 /* SwitchControlCell.xib in Resources */,
+				F2C2FBE023A10F850065AE1E /* PlayerListEntryCell.xib in Resources */,
+				F2C1B754239F1EF800D96F25 /* ClubSetting.storyboard in Resources */,
 				F259749B235F7A4E00A3DE51 /* LaunchScreen.storyboard in Resources */,
+				F2FE9798239E552D0077D3AF /* SectionHeaderCell.xib in Resources */,
 				F28DAFC7237CFA9900846C9D /* ChooseClubs.storyboard in Resources */,
+				F2F1D3DE239E800D006D346A /* CourtSettingCell.xib in Resources */,
 				F25974C82360101300A3DE51 /* loadingBar.json in Resources */,
-				F297C0A1237BBC1D00EBECA3 /* ButtonAccessory.xib in Resources */,
-				F297C099237BBC1C00EBECA3 /* Loading.storyboard in Resources */,
-				F297C09F237BBC1D00EBECA3 /* ClubAccessory.xib in Resources */,
-				F28F74ED2398DB1A00730309 /* LoadingAccessory.xib in Resources */,
+				F2B8E811239F225E00CE72C0 /* SectionFooterCell.xib in Resources */,
+				F297C099237BBC1C00EBECA3 /* AlertServiceController.storyboard in Resources */,
 				F26712A52363E71F00084354 /* Home.storyboard in Resources */,
-				F297C09C237BBC1D00EBECA3 /* Alert.storyboard in Resources */,
 				F297C0A3237BBC1D00EBECA3 /* ActionSheet.storyboard in Resources */,
 				F25974A3235F843900A3DE51 /* Assets.xcassets in Resources */,
+				F2F1D3DC239E7666006D346A /* BasicSettingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,27 +489,32 @@
 			files = (
 				F27623A8237E1C0500C4853F /* QueueAppSingleTextFieldViewController.swift in Sources */,
 				F297C0A2237BBC1D00EBECA3 /* ActionTableCell.swift in Sources */,
+				F245B113239B90B400ED6881 /* CourtSettingCell.swift in Sources */,
 				F25974B7235F8BE400A3DE51 /* QueueAppViewController.swift in Sources */,
-				F297C0A0237BBC1D00EBECA3 /* ButtonAccessory.swift in Sources */,
+				F2BF4849239B01130052A648 /* ClubSettingTableViewController.swift in Sources */,
+				F2BF484B239B05CE0052A648 /* QueueAppTableViewController.swift in Sources */,
+				F2C1B757239F200000D96F25 /* CourtSettingsTableViewController.swift in Sources */,
+				F2B8E814239F336200CE72C0 /* SwitchControlCell.swift in Sources */,
 				F27CBE7923973A4800CF016D /* UIView.swift in Sources */,
+				F245B111239B52E900ED6881 /* BasicSettingCell.swift in Sources */,
 				F20E3D3623612DB800C32893 /* NoAccountViewController.swift in Sources */,
 				F20E3D3A236142F600C32893 /* NewNameViewController.swift in Sources */,
-				F297C09E237BBC1D00EBECA3 /* ClubAccessory.swift in Sources */,
 				F27623AA237E221B00C4853F /* UserSelectImageController.swift in Sources */,
 				F26EC87C236D3D25004CB6AB /* UINavigationBar.swift in Sources */,
 				F25974BF235FA4D900A3DE51 /* EmailCheckViewController.swift in Sources */,
 				F2860D8B236D683300BEFB34 /* ClubCell.swift in Sources */,
 				F28DAFC5237CF1FE00846C9D /* UINavigationItem.swift in Sources */,
-				F297C09A237BBC1C00EBECA3 /* LoadingViewController.swift in Sources */,
+				F297C09A237BBC1C00EBECA3 /* AlertServiceController.swift in Sources */,
 				F2860D8D236D776C00BEFB34 /* AddNewClubStaticCell.swift in Sources */,
 				F28DAFC9237D037100846C9D /* JoinClubViewController.swift in Sources */,
 				F26EC87A236D34FF004CB6AB /* ClubSelectionTableViewController.swift in Sources */,
 				F25974B9235F8D1300A3DE51 /* String.swift in Sources */,
 				F259748F235F7A4D00A3DE51 /* AppDelegate.swift in Sources */,
-				F28F74EB2398DB0700730309 /* LoadingAccessory.swift in Sources */,
 				F25974AE235F850B00A3DE51 /* QueueAppButton.swift in Sources */,
 				F25974B5235F8BC700A3DE51 /* GreetingViewController.swift in Sources */,
+				F2C2FBDF23A10F850065AE1E /* PlayerListEntryCell.swift in Sources */,
 				F28F74E82397DD2500730309 /* ConfirmFoundClubViewController.swift in Sources */,
+				F2C2FBDC23A10F200065AE1E /* SelectPartnerTableViewController.swift in Sources */,
 				F297C09B237BBC1D00EBECA3 /* AlertService.swift in Sources */,
 				F25974B0235F864D00A3DE51 /* EmailDomains.swift in Sources */,
 				F27623A4237D41F900C4853F /* NewClubImageViewController.swift in Sources */,
@@ -511,14 +522,15 @@
 				F25974A6235F84AC00A3DE51 /* Assets.swift in Sources */,
 				F2597491235F7A4D00A3DE51 /* SceneDelegate.swift in Sources */,
 				F25974BD235F8D8200A3DE51 /* QueueUIAlias.swift in Sources */,
-				F297C09D237BBC1D00EBECA3 /* AlertController.swift in Sources */,
 				F297C098237BBC1C00EBECA3 /* ActionSheetController.swift in Sources */,
+				F2B8E810239F225E00CE72C0 /* SectionFooterCell.swift in Sources */,
 				F2170D26236AC377005448BD /* ClubTableViewController.swift in Sources */,
 				F27E0F48236AF794008DFCE8 /* CourtCell.swift in Sources */,
 				F20E3D3E2362D6D800C32893 /* NewPasswordViewController.swift in Sources */,
 				F27CBE7C239764AA00CF016D /* UIColor.swift in Sources */,
 				F20E3D412362D71000C32893 /* NewImageViewController.swift in Sources */,
 				F25974C1235FC38900A3DE51 /* LoginViewController.swift in Sources */,
+				F245B10F239B32C500ED6881 /* SectionHeaderCell.swift in Sources */,
 				F25974AD235F850B00A3DE51 /* QueueAppTextField.swift in Sources */,
 				F27623A2237D41EA00C4853F /* NewClubNameViewController.swift in Sources */,
 			);

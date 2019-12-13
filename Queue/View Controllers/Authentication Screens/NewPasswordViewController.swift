@@ -18,7 +18,7 @@ class NewPasswordViewController: QueueUI.ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createAccountButton.setButton(state: .disabled)
+        createAccountButton.setButton(style: .disabled)
         addObservers()
     }
     
@@ -32,12 +32,12 @@ class NewPasswordViewController: QueueUI.ViewController {
             if text.count > 5 {
                 passwordRequirementLabel.textColor = .QueueAppViolet
                 passwordRequirementLabel.text = "Valid Password"
-                createAccountButton.setButton(state: .active)
+                createAccountButton.setButton(style: .active)
             }
             else {
                 passwordRequirementLabel.textColor = .lightGray
                 passwordRequirementLabel.text = "6 characters min."
-                createAccountButton.setButton(state: .disabled)
+                createAccountButton.setButton(style: .disabled)
             }
         }
     }
@@ -51,10 +51,19 @@ class NewPasswordViewController: QueueUI.ViewController {
     }
     
     private func addObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)),
-                                               name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard(notification:)),
-                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleKeyboard(notification:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handleKeyboard(notification:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
     }
     
     @objc func handleKeyboard(notification: Notification) {
